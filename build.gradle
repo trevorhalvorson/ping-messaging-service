@@ -6,7 +6,6 @@ buildscript {
     ext.ktor_version = '0.4.0-alpha-14'
     ext.slf4j_version = '1.7.12'
     ext.logback_version = '1.2.1'
-    ext.commons_email_version = '1.5'
 
     repositories {
         mavenCentral()
@@ -39,8 +38,6 @@ dependencies {
     compile "org.jetbrains.ktor:ktor-gson:$ktor_version"
     compile "org.slf4j:jul-to-slf4j:$slf4j_version"
     compile "ch.qos.logback:logback-classic:$logback_version"
-
-    compile "org.apache.commons:commons-email:$commons_email_version"
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
