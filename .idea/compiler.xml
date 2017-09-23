@@ -2,8 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="ping-server_main" target="1.8" />
-      <module name="ping-server_test" target="1.8" />
+      <module name="ping-messaging-servc_main" target="1.8" />
+      <module name="ping-messaging-servc_test" target="1.8" />
+      <module name="ping-messaging-service_main" target="1.8" />
+      <module name="ping-messaging-service_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

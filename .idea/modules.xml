@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-server.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-server_main.iml" group="ping-server" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-server_test.iml" group="ping-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-messaging-service.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-messaging-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-messaging-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-messaging-service_main.iml" group="ping-messaging-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ping-messaging-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ping-messaging-service_test.iml" group="ping-messaging-service" />
     </modules>
   </component>
 </project>
