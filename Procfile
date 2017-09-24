@@ -1,1 +1,1 @@
-web: ./gradlew run -Pkotlin.incremental=false
+web: java -jar server/ping-messaging-service-1.0.0.jar
