@@ -5,6 +5,7 @@ import kotlinx.coroutines.experimental.CommonPool
 import kotlinx.coroutines.experimental.run
 import model.PingRequest
 import model.PingResponse
+import org.jetbrains.ktor.features.logInfo
 import org.jetbrains.ktor.http.ContentType
 import org.jetbrains.ktor.http.HttpStatusCode
 import org.jetbrains.ktor.routing.Route
@@ -24,6 +25,7 @@ fun Route.ping() {
                 call.respond(PingResponse(true, message.sid))
             }
         } catch (e: Exception) {
+            App.logger.error(call.request.logInfo(), e)
             call.respondText(
                     Gson().toJson(PingResponse(false, e.localizedMessage)),
                     ContentType.Application.Json,

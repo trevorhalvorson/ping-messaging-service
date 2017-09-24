@@ -23,6 +23,7 @@ build/
 
 # Heroku
 .env
+server/
 
 ## File-based project format:
 *.iws

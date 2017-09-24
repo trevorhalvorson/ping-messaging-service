@@ -23,7 +23,9 @@ class App {
         install(DefaultHeaders)
         install(CallLogging)
         install(Locations)
-        install(GsonSupport)
+        install(GsonSupport) {
+            setPrettyPrinting()
+        }
         install(Routing) {
             ping()
         }
