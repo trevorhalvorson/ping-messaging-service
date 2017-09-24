@@ -6,7 +6,7 @@ Built using the [Ktor](https://github.com/Kotlin/ktor) framework.
 
 ### Setup
 
-Intellij:
+**Intellij**:
 
 1. *Edit configurations*
 2. Set *Main class* to `org.jetbrains.ktor.netty.DevelopmentHost`
@@ -16,6 +16,20 @@ Intellij:
     - `TWILIO_NUMBER`: a Twilio phone number messages will be sent **from**
     - `ACCOUNT_SID`: a Twilio account SID
     - `AUTH_TOKEN`: a Twilio auth token
+    
+**Heroku**:
+
+Add a `.env` file to the root of the project containing your environment variables (see Intellij setup for details):
+
+```
+PORT=5000
+TWILIO_NUMBER="+10000000000"
+ACCOUNT_SID="0"
+AUTH_TOKEN="0"
+```
+
+*NOTE*: if you are deploying to heroku you must either remove `.env` from the `.gitignore` file and commit it or
+add your variables to your project's Config Variables in the Heroku platform
 
 ### Testing
 
@@ -25,11 +39,11 @@ Intellij:
 
 `PORT`: the port where this server is running
 
-Request:
+**Request**:
 
 `curl -H "Content-Type: application/json" -X POST -d '{"phoneNumber":"PHONE_NUMBER","message":"MESSAGE"}' http://localhost:PORT/ping`
 
-Response:
+**Response**:
 
 ```json
 {
@@ -37,3 +51,7 @@ Response:
     "message": "MESSAGE_ID"
 }
 ```
+
+### Clients
+
+- [Android](https://github.com/trevorhalvorson/ping-android)

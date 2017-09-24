@@ -21,6 +21,9 @@
 .gradle/
 build/
 
+# Heroku
+.env
+
 ## File-based project format:
 *.iws
 
