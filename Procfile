@@ -1,1 +1,1 @@
-web: ./gradlew run
+web: ./gradlew run -Pkotlin.incremental=false
