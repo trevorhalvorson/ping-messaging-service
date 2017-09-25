@@ -19,6 +19,10 @@ Built using the [Ktor](https://github.com/Kotlin/ktor) framework.
     
 **Heroku**:
 
+Set the `GRADLE_TASK` Config Variable to build the `.jar` specified in the `Procfile`:
+
+`heroku config:set GRADLE_TASK="shadowJar"`
+
 Add a `.env` file to the root of the project containing your environment variables (see Intellij setup for details):
 
 ```
