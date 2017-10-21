@@ -1,13 +1,15 @@
 import com.twilio.Twilio
+import io.ktor.application.Application
+import io.ktor.application.install
+import io.ktor.features.CallLogging
+import io.ktor.features.ContentNegotiation
+import io.ktor.features.DefaultHeaders
+import io.ktor.gson.GsonConverter
+import io.ktor.http.ContentType
+import io.ktor.locations.Locations
+import io.ktor.locations.location
+import io.ktor.routing.Routing
 import mu.KLogging
-import org.jetbrains.ktor.application.Application
-import org.jetbrains.ktor.application.install
-import org.jetbrains.ktor.features.CallLogging
-import org.jetbrains.ktor.features.DefaultHeaders
-import org.jetbrains.ktor.gson.GsonSupport
-import org.jetbrains.ktor.locations.Locations
-import org.jetbrains.ktor.locations.location
-import org.jetbrains.ktor.routing.Routing
 
 @location("/ping")
 class Ping
@@ -23,9 +25,10 @@ class App {
         install(DefaultHeaders)
         install(CallLogging)
         install(Locations)
-        install(GsonSupport) {
-            setPrettyPrinting()
+        install(ContentNegotiation) {
+            register(ContentType.Application.Json, GsonConverter())
         }
+
         install(Routing) {
             ping()
         }
